@@ -1,113 +1,221 @@
+'use client'
+
+import { Navbar } from '@/components/Navbar'
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { CgDanger } from 'react-icons/cg'
 import Image from 'next/image'
+import { Slider } from '@/components/Slider'
+import { Iten } from '@/components/Iten'
+import { motion } from 'framer-motion'
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      {/* section 1 */}
+      <section>
+        <div className='flex flex-col items-center justify-start bg-primary min-h-[84vh] shadow-md'>
+          <Navbar typ={3}/>
+
+          <div className='mt-4 md:mt-8 lg:grid lg:grid-cols-2 flex flex-col-reverse items-center justify-center p-8 md:p-16'>
+
+            {/* text */}
+            <div className='flex flex-col items-center justify-center gap-y-4'>
+              {/* title */}
+              <h1 className='text-[28px] md:text-[32px] font-medium'>Taróloga Kelly</h1>
+
+              {/* paragraph */}
+              <p className='text-[18px] md:text-[22px] font-normal text-center'>
+              Seja bem-vindo a um lugar onde o amor é desvendado pelas cartas. 
+              Explore as respostas que o universo reserva para as questões do seu 
+              coração e encontre a harmonia nos relacionamentos.
+              </p>
+
+              {/* button */}
+              <div className='flex flex-col items-center justify-center'>
+                
+                <h2>Agende sua consulta agora mesmo</h2>
+                <motion.a href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+                  <FaWhatsapp className='text-2xl'/>
+                  <span>Quero agendar minha consulta</span>
+                </motion.a>
+              </div>
+            </div>
+
+            {/* image */}
+            <div className='flex flex-col items-center overflow-hidden justify-center mb-8'>
+              <div className='min-w-[216px] min-h-[242px] overflow-hidden rounded-[84px] shadow-md relative'>
+                <div className='absolute w-[216px] h-[242px]'>
+                  <Image src={'/avatar.png'} alt={'avatar'} fill objectFit="cover" />
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* section 2 */}
+      <section>
+        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md'>
+          {/* text */}
+          <div className='flex flex-col items-center justify-center p-4 md:p-12'>
+            {/* title */}
+            <h1 className='text-[32px] md:text-[38px]'>Hoje é</h1>
+            {/* subtitle */}
+            <h2 className='text-[28px] md:text-[32px]'>provável que você</h2>
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          {/* itens */}
+          <div className='flex flex-col gap-y-4 items-start justify-center p-4 md:px-12 lg:px-20'>
+            
+            <Iten title='Sinta duvidas e incertezas' path={2} />
+            <Iten title='Sinta insegurança consigo mesma' path={2} />
+            <Iten title='Sinta dificuldades em tomar decisões' path={2} />
+            <Iten title='Sinta que falta algo na vida' path={2} />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          {/* info */}
+          <div className='flex flex-col items-center justify-center text-center mx-4 md:mx-10 gap-y-4 p-6 my-4 md:my-6 border border-black rounded-lg'>
+            {/* icon */}
+            <CgDanger className='text-4xl' />
+            {/* text */}
+            <p className='text-[18px] md:text-[20px]'>
+            Saiba que esses problemas não estão em você, 
+            existe uma motivo por trás de tudo isso
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* section 3 */}
+      <section>
+
+        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md'>
+
+          {/* text */}
+          <div className='flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6'>
+            {/* title */}
+            <h2 className='text-[22px] md:text-[28px]'>Isso acontece porque até agora você seguiu perdido(a) sem um direcionamento </h2>
+            <h3 className='text-[18px] md:text-[22px]'>Essa é a diferença que o direcionamento faz na sua vida</h3>
+          </div>
+
+          {/* itens */}
+          <div className='flex flex-col gap-y-4 items-start justify-center p-4 md:px-12 lg:px-20'>
+
+            <Iten title='Visão dos próximos acontecimentos' path={1} />
+            <Iten title='Insights valiosos sobre suas relações, carreira, finanças' path={1} />
+            <Iten title='Avaliar com firmezas atitudes a serem tomadas' path={1} />
+            <Iten title='Superação de obstáculos' path={1} />
+
+          </div>
+
+          {/* button */}
+          <div className='flex flex-col items-center justify-center my-6 md:my-8'>
+                
+            <h2>Não espere mais para mudar sua vida</h2>
+            <motion.a href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+              <FaWhatsapp className='text-2xl'/>
+              <span>Quero agendar minha consulta</span>
+            </motion.a>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* section 4 */}
+      <section>
+        <div className='flex flex-col items-center justify-start shadow-md w-full bg-[url("/bg.jpg")] min-h-screen bg-cover bg-center'>
+          {/* text */}
+          <div className='bg-black/30 flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6 w-full text-white'>
+            {/* title */}
+            <h2 className='text-[22px] md:text-[28px]'>Sua vida amorosa merece o melhor sempre</h2>
+            <h3 className='text-[18px] md:text-[22px]'>Veja algumas de nossas soluções</h3>
+          </div>
+
+          {/* itens */}
+          <div className='w-full xl:max-w-[65%] p-4 my-4'>
+            <Slider />
+
+            {/* button */}
+            <div className='flex flex-col items-center justify-center my-6 md:my-8'>
+                
+              <h2 className='text-white'>Agende agora mesmo sua consulta</h2>
+              <motion.a href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+                <FaWhatsapp className='text-2xl'/>
+                <span>Quero agendar minha consulta</span>
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* section 5 */}
+      <section>
+        <div className='bg-primary flex flex-col items-center justify-center shadow-md'>
+          {/* text */}
+          <div className='flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6'>
+            {/* title */}
+            <h2 className='text-[22px] md:text-[28px]'>Ainda tem duvidas?</h2>
+            <h3 className='text-[18px] md:text-[22px]'>Tire um tempinho para ler as avaliações de nossos clientes que já teve suas vidas mudadas ou me pergunte diretamente e esclareça sua duvida.</h3>
+          </div>
+
+          {/* itens */}
+          <div className='flex flex-col items-center justify-center gap-4'>
+
+            {/* button */}
+            <div className='flex flex-col items-center justify-center '>
+                
+              <h2>Avaliações</h2>
+              <motion.a whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} href='/avaliacoes' className='flex p-2 gap-x-2 min-w-[180px] bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+                <span>Avaliações de clientes</span>
+              </motion.a>
+            </div>
+
+            {/* button */}
+            <div className='flex flex-col items-center justify-center mb-8'>
+                
+              <h2>Saiba mais</h2>
+              <motion.a href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 min-w-[180px] bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+                <FaWhatsapp className='text-2xl'/>
+                <span>Tire sua duvida</span>  
+              </motion.a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* footer */}
+      <footer>
+        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
+
+          {/* ICONS */}
+          <div className='flex items-center justify-center gap-4'>
+            <a href="https://www.instagram.com/tarologa_kelly13/"><FaInstagram className='text-2xl hover:text-accent' /></a>
+            <a href="href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0'"><FaWhatsapp  className='text-2xl hover:text-accent' /></a>
+          </div>
+
+          {/* text */}
+          <div className='flex flex-col items-center justify-center text-center text-[12px]'>
+            <h2 className='uppercase'>taróloga Kelly © </h2>
+            <h3>Todos os direitos reservados</h3>
+          </div>
+
+          <div className='absolute left-0 bottom-0'>
+            <a href='https://www.linkedin.com/in/bruno-wanderson/' className='text-[10px] hover:text-accent'>DEV: Bruno Wanderson</a>
+          </div>
+        </div>
+      </footer>
+
     </main>
   )
 }
