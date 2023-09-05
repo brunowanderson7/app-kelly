@@ -78,7 +78,7 @@ export function Slider() {
                                     slide.images.map((image, imgIndex) => {
                                         return (
                                             <div className='relative rounded-lg overflow-hidden flex items-center justify-center group' key={imgIndex}>
-                                                <div className='flex items-center justify-center relative overflow-hidden group min-w-[316px] md:min-w-[424px] md:h-[164px] h-[120px] bg-white/80 rounded-lg'>
+                                                <div className='flex items-center shadow-md justify-center relative overflow-hidden group min-w-[316px] md:min-w-[424px] md:h-[164px] h-[120px] bg-white/20 rounded-lg'>
                                                     <div className="w-[120px] h-[120px] md:w-[164px] md:h-[164px] absolute left-0">
                                                         <Image src={image.path} alt={image.title} fill objectFit="cover" />
                                                     </div>
