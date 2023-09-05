@@ -2,53 +2,22 @@
 
 const services = {
     slides: [
-        {
-            images: [
-                {
-                    title: 'Abertura de caminhos amorosos',
-                    path: '/img1.png',
-                    description: 'Tira tudo que impede você de atrair um relacionamento',
-                },
-                {
-                    title: 'Adoçamento amoroso',
-                    path: '/img4.png',
-                    description: 'Consiste em deixar o casal mais próximo e mais carinhoso entre si',
-                },
-            ],
-        },
-
-        {
-            images: [
-                {
-                    title: 'Adoçamento sexual',
-                    path: '/img3.png',
-                    description: 'Recupera a paixão do casal, aguça a paixão e a criatividade do casal',
-                },
-                {
-                    title: 'Afastamento rival',
-                    path: '/img5.png',
-                    description: 'Retira aquela pessoa que está atrapalhando relacionamento de dar certo',
-                },
-            ],
-        },
-
         
-
         {
             images: [
                 {
-                    title: 'Amor próprio',
-                    path: '/img2.png',
-                    description: 'Ajuda elevar a autoestima e remove bloqueios emocionais e espirituais',
+                    title: 'Jogo de buzios',
+                    path: '/img7.png',
+                    description: 'Orienta e mostra o caminho a seguir, trazendo respostas para suas dúvidas',
                 },
                 {
-                    title: 'Chora aos meus pés',
-                    path: '/img6.png',
-                    description: 'Ideal para quem quer a pessoa caidinha e te obedencendo em tudo',
+                    title: 'Baralho de tarot',
+                    path: '/img8.png',
+                    description: 'Ajudam no processo de autoconhecimento e apontam alguns caminhos',
                 },
             ],
         },
-      ]
+    ],
 }
 
 
@@ -63,7 +32,7 @@ import Image from 'next/image'
 
 
 
-export function Slider() {
+export function Oracles() {
 
     return (
 
@@ -78,7 +47,7 @@ export function Slider() {
                                     slide.images.map((image, imgIndex) => {
                                         return (
                                             <div className='relative rounded-lg overflow-hidden flex items-center justify-center group' key={imgIndex}>
-                                                <div className='flex items-center justify-center relative overflow-hidden group min-w-[316px] md:min-w-[424px] md:h-[164px] h-[120px] bg-white/80 rounded-lg'>
+                                                <div className='flex items-center justify-center relative overflow-hidden group min-w-[316px] md:min-w-[424px] md:h-[164px] h-[120px] bg-white/10 shadow-md rounded-lg'>
                                                     <div className="w-[120px] h-[120px] md:w-[164px] md:h-[164px] absolute left-0">
                                                         <Image src={image.path} alt={image.title} fill objectFit="cover" />
                                                     </div>

@@ -13,7 +13,7 @@ export default function Avaliacoes () {
         <>
             {/* section 1 */}
             <section>
-                <div className='flex flex-col items-center justify-start bg-primary min-h-[100vh] shadow-md'>
+                <div className='flex flex-col items-center justify-start bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 min-h-[100vh] shadow-md'>
                     <Navbar typ={2}/>
 
                     <div className="flex flex-col gap-y-4 items-center justify-center mt-10">
@@ -26,7 +26,7 @@ export default function Avaliacoes () {
                             <FaInstagram className='text-2xl'/>
                             <span>Instagram</span>  
                         </motion.a>
-                        <motion.a href='malito:tarologakelly@gmail.com' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 min-w-[300px] bg-accent rounded-lg items-start justify-start pl-4 text-white font-medium shadow-md'>
+                        <motion.a href='mailto:tarologakelly@gmail.com' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 min-w-[300px] bg-accent rounded-lg items-start justify-start pl-4 text-white font-medium shadow-md'>
                             <BiLogoGmail className='text-2xl'/>
                             <span>tarologakelly@gmail.com</span>  
                         </motion.a>
@@ -37,7 +37,7 @@ export default function Avaliacoes () {
 
             {/* footer */}
             <footer>
-                <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
+                <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
 
                 {/* ICONS */}
                 <div className='flex items-center justify-center gap-4'>

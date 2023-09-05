@@ -10,7 +10,7 @@ export default function Avaliacoes () {
         <>
         {/* section 1 */}
         <section>
-            <div className='flex flex-col items-center justify-start bg-primary min-h-[100vh] shadow-md'>
+            <div className='flex flex-col items-center justify-start bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 min-h-[100vh] shadow-md'>
                 <Navbar typ={1}/>
 
                 <div className="w-full mt-10">
@@ -23,7 +23,7 @@ export default function Avaliacoes () {
 
         {/* footer */}
         <footer>
-            <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
+            <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
 
             {/* ICONS */}
             <div className='flex items-center justify-center gap-4'>

@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { Slider } from '@/components/Slider'
 import { Iten } from '@/components/Iten'
 import { motion } from 'framer-motion'
+import { Oracles } from '@/components/Oracles'
 
 
 
@@ -15,7 +16,7 @@ export default function Home() {
     <main>
       {/* section 1 */}
       <section>
-        <div className='flex flex-col items-center justify-start bg-primary min-h-[84vh] shadow-md'>
+        <div className='flex flex-col items-center justify-start bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 min-h-[84vh] shadow-md'>
           <Navbar typ={3}/>
 
           <div className='mt-4 md:mt-8 lg:grid lg:grid-cols-2 flex flex-col-reverse items-center justify-center p-8 md:p-16'>
@@ -60,7 +61,7 @@ export default function Home() {
 
       {/* section 2 */}
       <section>
-        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md'>
+        <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center mt-1 shadow-md'>
           {/* text */}
           <div className='flex flex-col items-center justify-center p-4 md:p-12'>
             {/* title */}
@@ -98,7 +99,7 @@ export default function Home() {
       {/* section 3 */}
       <section>
 
-        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md'>
+        <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center mt-1 shadow-md'>
 
           {/* text */}
           <div className='flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6'>
@@ -133,6 +134,33 @@ export default function Home() {
 
       {/* section 4 */}
       <section>
+        <div className='flex flex-col items-center justify-start shadow-md w-full min-h-[60vh] mt-1 bg-cover bg-center bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200'>
+          {/* text */}
+          <div className=' flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6 w-full'>
+            {/* title */}
+            <h2 className='text-[22px] md:text-[28px]'>Receba insigths valiosos</h2>
+            <h3 className='text-[18px] md:text-[22px]'>Consulte os oráculos</h3>
+          </div>
+
+          {/* itens */}
+          <div className='w-full xl:max-w-[65%] p-4 my-4'>
+            <Oracles />
+
+            {/* button */}
+            <div className='flex flex-col items-center justify-center my-6 md:my-8'>
+                
+              <h2>Agende agora mesmo sua consulta</h2>
+              <motion.a href='https://api.whatsapp.com/send/?phone=%2B5531981128561&text&type=phone_number&app_absent=0' whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className=' flex p-2 gap-x-2 bg-accent rounded-lg items-center justify-center text-white font-medium shadow-md'>
+                <FaWhatsapp className='text-2xl'/>
+                <span>Quero agendar minha consulta</span>
+              </motion.a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* section 5 */}
+      <section>
         <div className='flex flex-col items-center justify-start shadow-md w-full bg-[url("/bg.jpg")] min-h-screen bg-cover bg-center'>
           {/* text */}
           <div className='bg-black/30 flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6 w-full text-white'>
@@ -158,9 +186,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* section 5 */}
+      {/* section 6 */}
       <section>
-        <div className='bg-primary flex flex-col items-center justify-center shadow-md'>
+        <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center shadow-md'>
           {/* text */}
           <div className='flex flex-col text-center items-center justify-center p-6 md:p-12 gap-y-6'>
             {/* title */}
@@ -196,7 +224,7 @@ export default function Home() {
 
       {/* footer */}
       <footer>
-        <div className='bg-primary flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
+        <div className='bg-gradient-to-r from-primary-200 via-primary-100 to-primary-200 flex flex-col items-center justify-center mt-1 shadow-md gap-2 relative py-6'>
 
           {/* ICONS */}
           <div className='flex items-center justify-center gap-4'>
